@@ -1,7 +1,5 @@
 
 # fastapiwisequotes
-
-
 # Tech Stack
 - Fast API
 - Python 3.9+

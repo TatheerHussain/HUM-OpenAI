@@ -11,12 +11,12 @@ users = []
 
 class User(BaseModel):
     email: str
-    is_active:bool
+    is_active: bool
     bio: Optional[str]
     
     
 
-@app.get("/users", response_model= List(User))
+@app.get("/users", response_model= List[User])
 async def get_users():
     return users
 
@@ -25,3 +25,8 @@ async def get_users():
 async def create_users(user: User):
     users.append(user)
     return "success"
+
+
+@app.get("/users/{id}")
+async def get_user(id: int):
+    return users[id]
