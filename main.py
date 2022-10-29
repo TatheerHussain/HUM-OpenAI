@@ -24,7 +24,7 @@ async def get_users():
 @app.post("/users")
 async def create_users(user: User):
     users.append(user)
-    return "success"
+    return "successfully created user"
 
 
 @app.get("/users/{id}")
