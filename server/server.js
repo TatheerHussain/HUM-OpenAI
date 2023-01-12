@@ -3,23 +3,23 @@ import * as dotenev from 'dotenv';
 import cors from 'cors';
 
 
-import {configuration, openAIApi} from 'openai';
+import {Configuration, OpenAIApi} from 'openai';
 
 
 dotenev.config();
 
-const configuration = new configuration({
+const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-const openai = new openAIApi(configuration);
+const openai = new OpenAIApi(configuration);
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 
-app.get('/', async (req, res) => {'
+app.get('/', async (req, res) => {
     res.status(200).send({
         message: "Hello from tatheer's codex AI",
     })
