@@ -192,3 +192,8 @@ form img {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+#form-container {
+  position: absolute;
+  bottom: 0;
+}
+
