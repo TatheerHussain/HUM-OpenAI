@@ -14,7 +14,7 @@ function loader(element) {
         element.textContent += '.';
 
         // If the loading indicator has reached three dots, reset it
-        if (element.textContent === '....') {
+        if (element.textContext === '....') {
             element.textContent = '';
         }
     }, 300);
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    const response = await fetch('http://localhost:5000',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -107,14 +107,14 @@ const handleSubmit = async (e) => {
     } else {
         const err = await response.text()
 
-        messageDiv.innerHTML = "Something went wrong"
+        messageDiv.innerHTML = "Something smells fishy..."
         alert(err)
     }
 }
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === '13') {
         handleSubmit(e)
     }
 })
