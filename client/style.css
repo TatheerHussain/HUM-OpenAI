@@ -12,7 +12,7 @@
 }
 
 .ai {
-  background: #40414F;
+  background: #bd66bc;
 }
 
 .chat {
@@ -31,7 +31,7 @@
   height: 36px;
   border-radius: 5px;
 
-  background: #5436DA;
+  background: #da3e36;
 
   display: flex;
   justify-content: center;
@@ -39,12 +39,12 @@
 }
 
 .ai .profile {
-  background: #10a37f;
+  background: #5eff01;
 }
 
 .profile img {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 65%;
   object-fit: contain;
 }
 
@@ -74,7 +74,7 @@
   display: none;
 }
 
-form {
+/* form {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -85,11 +85,36 @@ form {
   display: flex;
   flex-direction: row;
   gap: 10px;
+} */
+form {
+  position: fixed; /* fix the form to the bottom of the page */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* make the form take up the full width of the page */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #602479;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 1; /* make sure the form is on top of other elements */
+}
+
+/* add a media query to adjust the form when the screen size is smaller */
+@media only screen and (max-width: 768px) {
+  form {
+    flex-direction: column; /* change the form to a column layout for smaller screens */
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 
+
 textarea {
-  width: 100%;
+  width: 80%;
 
   color: #fff;
   font-size: 18px;
