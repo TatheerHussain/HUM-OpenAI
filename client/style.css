@@ -44,11 +44,10 @@ body {
 .wrapper {
   width: 100%;
   padding: 15px
+  var(--secondary-color);
 }
 
-.ai {
-  background: #40414F
-}
+
 
 .chat {
   border-radius: 20px;
