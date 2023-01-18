@@ -1,152 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+ */
 
-
-/* hides scrollbar */
-#chat_container::-webkit-scrollbar {
-  display: none;
-}
-
-.wrapper {
-  width: 100%;
-  padding: 15px;
-}
-
-.ai {
-  background: #bd66bc;
-}
-
-.chat {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 5px;
-
-  background: #da3e36;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ai .profile {
-  background: #5eff01;
-}
-
-.profile img {
-  width: 70%;
-  height: 65%;
-  object-fit: contain;
-}
-
-.message {
-  flex: 1;
-
-  color: #dcdcdc;
-  font-size: 20px;
-
-  max-width: 100%;
-  overflow-x: scroll;
-
-  /*
-   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
-   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
-   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
-   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
-  */
-  white-space: pre-wrap; 
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* hides scrollbar */
-.message::-webkit-scrollbar {
-  display: none;
-}
-
-/* form {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 10px;
-  background: #602479;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-} */
-form {
-  position: fixed; /* fix the form to the bottom of the page */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%; /* make the form take up the full width of the page */
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 10px;
-  background: #069a57;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  z-index: 1; /* make sure the form is on top of other elements */
-}
-
-/* add a media query to adjust the form when the screen size is smaller */
-@media only screen and (max-width: 768px) {
-  form {
-    flex-direction: column; /* change the form to a column layout for smaller screens */
-    align-items: center;
-    gap: 20px;
-  }
+@import url( "https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Alegreya Sans,sans-serif
 }
 
 
-
-textarea {
-  width: 80%;
-
-  color: #fff;
-  font-size: 18px;
-
-  padding: 10px;
-  background: transparent;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+body {
+  background: #313b27
 }
-
-button {
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  background: transparent;
-}
-
-form img {
-  width: 30px;
-  height: 30px;
-} */
 
 #app {
   width: 100vw;
   height: 100vh;
   background: #343541;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 #chat_container {
@@ -154,30 +28,141 @@ form img {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
-
   padding-bottom: 20px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
+
+#chat_container::-webkit-scrollbar {
+  display: none
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px
+}
+
+.ai {
+  background: #40414F
+}
+
+.chat {
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 1280px;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  max-width: 70%;
+}
+
+
+
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background: #5436DA;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+
+.ai .profile {
+  background: #c6920d;
+} 
+
+
+.profile img {
+  width: 60%;
+  height: 65%;
+  object-fit: contain;
+}
+
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  color: #333;
   font-size: 20px;
-
+  max-width: 100%;
   overflow-x: scroll;
-  word-break:break-all;
-  white-space: pre-wrap; 
-
+  white-space: pre-wrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  word-wrap: break-word;
+  margin-top: 10px;
+  animation: text-appear 0.5s ease-in;
 }
 
 
+
+
+
+.message::-webkit-scrollbar {
+  display: none
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #40414F;
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
+textarea {
+  width: 80%;
+  color: rgb(15, 6, 6);
+  font-size: 18px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  border: solid 1px #ccc;
+  height: 70px;
+  margin-left: 40px;
+  background-color: #f5f5f5;
+  
+}
+
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent
+}
+
+form img {
+  width: 30px;
+  height: 30px
+}
+
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+:root {
+  --primary-color: #f5f5f5;
+  --secondary-color: #333;
+}
