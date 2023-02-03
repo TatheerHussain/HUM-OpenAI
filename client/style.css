@@ -227,7 +227,7 @@ h3{
     font-size: 1.5em;
     white-space: pre;
     overflow: hidden;
-    animation: type 3s steps(60, end);
+    animation: type 4s steps(60, end);
     color:aliceblue; 
     font-size: 30px; 
     font-weight: bold;
