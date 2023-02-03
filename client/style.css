@@ -169,7 +169,7 @@ input[type="submit"] {
 h1{
   font-size: 3.5em;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: default;
   letter-spacing: 0.1em;
   margin-bottom: 0;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
