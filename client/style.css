@@ -10,7 +10,7 @@
 
 
 body {
-  background: #313b27
+  background: #343541;
 }
 
 #app {
@@ -188,6 +188,7 @@ h3 {
   text-align: center;
   color:#f5f5f5;
   background-color: #343541;
+  
  
 }
 
@@ -218,3 +219,21 @@ h3{
   50% { opacity: 0; } 
   100% { opacity: 3; } 
 }
+
+
+  p {
+    width: 100%;
+    margin: auto;
+    font-size: 1.5em;
+    white-space: pre;
+    overflow: hidden;
+    animation: type 3s steps(60, end);
+    color:aliceblue; 
+    font-size: 30px; 
+    font-weight: bold;
+  }
+  
+  @keyframes type {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
